@@ -2,7 +2,8 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
   csscomb = require('gulp-csscomb'),
 	autoprefixer = require('gulp-autoprefixer'),
-  connect = require('gulp-connect');
+  connect = require('gulp-connect'),
+  cmq = require('gulp-combine-media-queries');
  
 gulp.task('styles', function () {
   gulp.src('./scss/main.scss')
@@ -23,6 +24,9 @@ gulp.task('styles', function () {
             cascade: false
         }))
     .pipe(csscomb())
+    .pipe(cmq({
+      log: true
+    }))
     .pipe(gulp.dest('css/'));
 });
 
