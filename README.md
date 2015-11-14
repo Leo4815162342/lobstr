@@ -6,7 +6,7 @@ Includes:
 * *SASS*
 * *Gulp Autoprefixer*
 * *CSS Comb*
-* *Gulp connect with autoreload*
+* *Gulp connect*
 
 Code:
 

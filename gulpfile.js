@@ -8,7 +8,7 @@ gulp.task('styles', function () {
   gulp.src('./scss/main.scss')
     .pipe(sass({
       includePaths: ['./scss'],
-      outputStyle: 'expanded'
+      outputStyle: 'compressed' //'expanded' for non-compressed version
     }))
     .pipe(autoprefixer({
             browsers: [
@@ -23,24 +23,16 @@ gulp.task('styles', function () {
             cascade: false
         }))
     .pipe(csscomb())
-    .pipe(gulp.dest('css/'))
-    .pipe(connect.reload());
-});
-  
-gulp.task('html', function () {
-  gulp.src('./*.html')
-    .pipe(connect.reload());
+    .pipe(gulp.dest('css/'));
 });
 
 gulp.task('watch', function () {
   gulp.watch('./scss/**/*.scss', ['styles']);
-  gulp.watch(['./*.html'], ['html']);
 });
 
 gulp.task('connect', function() {
   connect.server({
-    root: './',
-    livereload: true
+    root: './'
   });
 });
 
