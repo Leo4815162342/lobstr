@@ -2,14 +2,14 @@
 @import 'mixins';
 @import 'vars';
 
-html,
-body {
+html {
 	height: 100%;
 }
 
 body {
+	min-height: 100%;
 	position: relative;
-	background: url('../img/lobstr-splash.jpg') no-repeat center center;
+	background: url('../img/lobstr-splash.jpg') no-repeat center center fixed;
 	background-size: cover;
 }
 
@@ -30,7 +30,7 @@ p {
 	font-size: 20px;
 	line-height: 40px;
 	text-align: justify;
-	@media screen and (max-width: 376px) {
+	@media screen and (max-width: 767px) {
 		position: static;
 		top: auto;
 		left: auto;
@@ -43,6 +43,9 @@ p {
 
 .intro {
 	margin-bottom: 100px;
+	@media screen and (max-width: 767px) {
+		margin-bottom: 50px;
+	}
 }
 
 .logo {
