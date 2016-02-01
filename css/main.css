@@ -290,3 +290,18 @@ p {
 
 }
 
+@media screen and (max-width: 376px) {
+
+.center {
+	position: static;
+	position: relative;
+	top: auto;
+	left: auto;
+	padding: 20px;
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none;
+}
+
+}
+
