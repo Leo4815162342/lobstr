@@ -2,6 +2,52 @@
 @import 'mixins';
 @import 'vars';
 
+html,
 body {
-	background-color: $main-color;
+	height: 100%;
+}
+
+body {
+	position: relative;
+	background: url('../img/lobstr-splash.jpg') no-repeat center center;
+	background-size: cover;
+}
+
+p {
+	margin: 0;
+}
+
+::selection {color:#fff; background:#31eab7;}
+::-moz-selection {color:#fff; background:#31eab7;}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 520px;
+	color: #fff;
+	font-size: 20px;
+	line-height: 40px;
+	text-align: justify;
+}
+
+.intro {
+	margin-bottom: 50px;
+}
+
+.logo {
+	display: inline-block;
+	width: 178px;
+	height: 22px;
+	margin-right: 40px;
+	background: url('../img/logo.png') no-repeat;
+	@include image-2x('../img/logo-2x.png', 178px, 22px);
+}
+
+.soon {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+	text-transform: uppercase;
+	letter-spacing: 0.429em;
 }
